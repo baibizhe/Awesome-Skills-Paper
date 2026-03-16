@@ -8,12 +8,13 @@ A curated list for agent skills papers, following the organization style of [Awe
 - Skill-Oriented Reasoning / World Modeling
 - Skill Routing / Orchestration / Ecosystems
 - Skill Benchmarks / Evaluation
+- Security / Robustness
 - Survey / Taxonomy / Theory
 
 ### Notes
 
 - This list is built from the papers you provided.
-- The duplicated entry `2602.06130` is included only once.
+- The duplicated entries `2602.06130` and `2601.04748` are each included only once.
 - For conceptual or survey papers without a single headline metric in the abstract, the “Introduction” field summarizes the main takeaway instead of forcing a number.
 
 #### Contributing
@@ -32,6 +33,7 @@ If you'd like to add more skill papers, benchmarks, or repositories, feel free t
 - [Skill-Oriented Reasoning / World Modeling](#skill-oriented-reasoning--world-modeling)
 - [Skill Routing / Orchestration / Ecosystems](#skill-routing--orchestration--ecosystems)
 - [Skill Benchmarks / Evaluation](#skill-benchmarks--evaluation)
+- [Security / Robustness](#security--robustness)
 - [Survey / Taxonomy / Theory](#survey--taxonomy--theory)
 
 ---
@@ -53,6 +55,7 @@ If you'd like to add more skill papers, benchmarks, or repositories, feel free t
 
 | Title & Authors | Introduction | Links |
 | --- | --- | --- |
+| **TARSE: Test-Time Adaptation via Retrieval of Skills and Experience for Reasoning Agents**<br>Junda Wang, Zonghai Tao, Hansi Zeng, Zhichao Yang, Hamed Zamani, Hong Yu | TARSE frames clinical QA as an agent problem with two explicit retrievable resources—**skills** from guideline-like procedures and **experience** from verified reasoning traces—and performs lightweight test-time adaptation on the retrieved items, showing consistent gains over strong medical RAG and prompting-only reasoning baselines. | [Paper](https://arxiv.org/abs/2603.01241) |
 | **Self-Improving World Modelling with Latent Actions**<br>Yifu Qiu, Zheng Zhao, Waylon Li, Yftah Ziser, Anna Korhonen, Shay B. Cohen, Edoardo M. Ponti | **SWIRL** learns world models from state-only sequences by alternating forward world modeling and inverse dynamics over latent actions, yielding gains of **16% on AURORABench**, **28% on ByteMorph**, **16% on WorldPredictionBench**, and **14% on StableToolBench**. | [Paper](https://arxiv.org/abs/2602.06130) |
 | **When Single-Agent with Skills Replace Multi-Agent Systems and When They Fail**<br>Xiaoxiao Li | This paper studies when a multi-agent system can be “compiled” into a single agent with a skill library, showing competitive reasoning accuracy with lower token usage and latency but also identifying a **phase transition** where skill selection collapses beyond a critical library size. | [Paper](https://arxiv.org/abs/2601.04748) |
 | **Agentic Proposing: Enhancing Large Language Model Reasoning via Compositional Skill Synthesis**<br>Zhengbo Jiao, Shaobo Wang, Zifan Zhang, Xuan Ren, Wei Wang, Bing Zhao, Hu Wei, Linfeng Zhang | Agentic Proposing treats data synthesis as a sequential decision process over composable reasoning skills and trains an Agentic-Proposer-4B with MGPO, and a 30B solver trained on only **11K** synthesized trajectories reaches **91.6%** on **AIME 2025**. | [Paper](https://arxiv.org/abs/2602.03279) |
@@ -78,11 +81,20 @@ If you'd like to add more skill papers, benchmarks, or repositories, feel free t
 
 ---
 
+## Security / Robustness
+
+| Title & Authors | Introduction | Links |
+| --- | --- | --- |
+| **Agent Skills in the Wild: An Empirical Study of Security Vulnerabilities at Scale**<br>Yi Liu, Weizhe Wang, Ruitao Feng, Yao Zhang, Guangquan Xu, Gelei Deng, Yuekang Li, Leo Zhang | This large-scale empirical study audits agent-skill ecosystems for security flaws and identifies **14 vulnerability patterns** across **42,447 skills**, finding that **26.1%** contain at least one issue while the proposed SkillScan detector reaches **86.7% precision**. | [Paper](https://arxiv.org/abs/2601.10338) |
+
+---
+
 ## Survey / Taxonomy / Theory
 
 | Title & Authors | Introduction | Links |
 | --- | --- | --- |
 | **Agent Skills for Large Language Models: Architecture, Acquisition, Security, and the Path Forward**<br>Renjun Xu, Yang Yan | This survey organizes the agent-skills landscape around architecture, acquisition, evaluation, and security, and its practical value is in turning scattered recent systems such as SAGE, CUA-Skill, and Agentic Proposing into a unified design space for future skill-based agents. | [Paper](https://arxiv.org/abs/2602.12430) |
+| **Agent Skill Framework: Perspectives on the Potential of Small Language Models in Industrial Environments**<br>Yangjie Xu, Lujun Li, Lama Sleem, Niccolo Gentile, Yewei Song, Yiqun Wang, Siming Ji, Wenbo Wu, Radu State | This paper formalizes the Agent Skill process and studies whether the paradigm transfers from frontier APIs to industrial **small language models**, finding that tiny models struggle with skill selection, while **12B–30B** SLMs benefit substantially and code-specialized models around **80B** can approach closed-source baselines with better GPU efficiency. | [Paper](https://arxiv.org/abs/2602.16653) |
 | **SoK: Agentic Skills -- Beyond Tool Use in LLM Agents**<br>Yanna Jiang, Delong Li, Haiyu Deng, Baihe Ma, Xu Wang, Qin Wang, Guangsheng Yu | This SoK formalizes agentic skills as reusable callable modules and contributes **seven design patterns** plus a **representation × scope** taxonomy, giving a clean conceptual map of the full skill lifecycle from discovery to update. | [Paper](https://arxiv.org/abs/2602.20867) |
 
 ---
